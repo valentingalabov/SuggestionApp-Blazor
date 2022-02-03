@@ -37,5 +37,4 @@ public class MongoUserData : IUserData
       var filter = Builders<UserModel>.Filter.Eq("Id", user.Id);
       return _users.ReplaceOneAsync(filter, user, new ReplaceOptions { IsUpsert = true });
    }
-
 }
